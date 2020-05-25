@@ -338,8 +338,16 @@ tracemem(e1)
 
 ```
 
+## 2.6 Unbinding and the garbage collector
 
+```{r ugcIntro}
 
+x <- 1:3
+x <- 2:4
+rm(x)
+gc()
+
+```
 
 
 
