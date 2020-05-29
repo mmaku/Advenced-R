@@ -1,0 +1,174 @@
+---
+title: "03 Vectors"
+output: html_notebook
+---
+
+## 3.2 Atomic vectors
+
+```{r repo}
+
+str(c("a", 1))
+as.integer(c("1", "1.5", "a"))
+
+```
+
+## 3.3 Attributes
+
+```{r getset}
+
+a <- 1:3
+attr(a, "x") <- "abcdef"
+attr(a, "x")
+cat("\n")
+
+attr(a, "y") <- 4:6
+str(attributes(a))
+cat("\n")
+
+a <- structure(
+  1:3, 
+  x = "abcdef",
+  y = 4:6
+)
+str(attributes(a))
+cat("\n")
+
+attributes(a[1])
+attributes(sum(a))
+
+```
+
+```{r names}
+
+x <- c(a = 1, b = 2, c = 3)
+names(x) <- c("a", "b", "c")
+x <- setNames(1:3, c("a", "b", "c"))
+
+x
+
+```
+
+```{r dimensions}
+
+a <- matrix(1:6, nrow = 2, ncol = 3)
+a
+cat("\n")
+
+b <- array(1:12, c(2, 3, 2))
+b
+cat("\n")
+
+c <- 1:6
+dim(c) <- c(3, 2)
+c
+cat("\n")
+
+str(1:3)                   # 1d vector
+str(matrix(1:3, ncol = 1)) # column vector
+str(matrix(1:3, nrow = 1)) # row vector
+str(array(1:3, 3)) 
+
+```
+
+```{r ATRexec1}
+
+setNames
+cat("\n")
+unname
+
+```
+
+```{r ATRexec2}
+
+dim(1:4)
+cat("\n")
+
+NCOL(1:4)
+ncol(1:4)
+cat("\n")
+
+NROW(1:4)
+nrow(1:4)
+
+```
+
+```{r ATRexec3}
+
+array(1:5, c(1, 1, 5))
+array(1:5, c(1, 5, 1))
+array(1:5, c(5, 1, 1))
+
+```
+
+## 3.4 S3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
